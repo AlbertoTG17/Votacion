@@ -14,12 +14,28 @@
 	}
 
 </STYLE>
+<script>
+
+	function validar (){
+		var msg = "Nombre de grupo obligatorio";
+		var nombreGrupo =document.getElementById("nombreGrupo").value;
+		
+		if (nombreGrupo == "") {
+			document.getElementById("error").innerHTML = msg;
+			return false;
+		}
+		
+		return true;
+		
+	}
+
+</script>
 </head>
 <body>
 
 	<div align="left">
 		
-		<form action="ServletEncuesta" method="post">
+		<form onsubmit="return validar()" action="ServletEncuesta" method="post">
 	
 			
 			<label>1. Usabilidad.</label><br/>
@@ -104,7 +120,8 @@
 			<br/><br/>
 			
 			<label>Grupo</label><br/>
-			<input type="text" name="nombre" size="30">
+			<input type="text" name="nombre" size="30" id="nombreGrupo">
+			<p id="error" style="color: red"></p>
 			
 			<br/><br/>
 			
