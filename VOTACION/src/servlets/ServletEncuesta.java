@@ -112,7 +112,7 @@ public class ServletEncuesta extends HttpServlet {
 			e.printStackTrace();
 		} finally {
 			Conexion.cerrarConexion();
-		}
+		}response.sendRedirect("formulario.jsp");
 		
 	}
 
