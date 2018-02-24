@@ -39,17 +39,19 @@ body{
 </script>
 </head>
 <body>
-
+<br/>
+ <p><strong>Rellene la encuesta, valorando al Grupo en una escala del 1 al 5, siendo 1 la peor puntuación y 5 la mejor.</strong></p>
 	<div align="left" class="col-md-6">
 		<div align="left" class="col-md-4.5">
+		
 		<form onsubmit="return validar()" action="ServletEncuesta" method="post">
-		<br/>
+		
 		<label >Grupo al que votas</label><br/>
 			<input  class="form-control input-lg" type="text" name="nombre" size="30" id="nombreGrupo">
 			<p id="error" style="color: red"></p>
 			</div>
 			<br/>
-	
+	<div class="col col-12 question">
 			
 			<label>1. Usabilidad.</label><br/>
 			<input type="radio" name="usabilidad" value="1"/> 1
@@ -145,7 +147,7 @@ body{
 				
 	
 	</div>
-	
+	</div>
 	
 
 </body>

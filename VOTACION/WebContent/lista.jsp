@@ -10,23 +10,24 @@
 <title>Ranking votaciones</title>
 <STYLE type="text/css">
 
-body{
-  margin-left: 30px;
-  margin-right: 30px;
-  margin-top: 20px;
-  margin-bottom: 20px;
+th, td {
+	width: 25%;
+	text-align: center;
+	vertical-align: top;
+
+	caption-side: bottom;
+	
 }
-/* table {
-	width: 20%;
-	height: 100px;
-} */
+
 </STYLE>
 </head>
 <body>
 <br>
-	<div align="center" class="container-fluid">
+<div align="center">
+		<div class="hr-lg"></div>
+	<div align="center" class="col-6">
 	<h2>Ranking de votaciones</h2></br>
-		<table border="1" class="table table-striped" >
+		<table border="1" class="table table-striped" align="center">
 		<thead >
 			<tr><th>GRUPO</th><th>PUNTUACION</th><th>COMENTARIOS</th></tr>
 			</thead>
@@ -44,8 +45,15 @@ body{
 		</table>
 		<br>
 		<a class="btn btn-primary" href="index.jsp">Volver a inicio</a>
-	<br><br>
+	<br><br><br>
 	</div>
 
+<FORM action="ServletTabla" method="post">
+			<p>Si da por finalizadas todas sus encuestas y desea borrar las
+				votaciones pulse abajo.</p>
+			<INPUT class="btn btn-danger" type="submit"
+				value="Borrar todas las votaciones" />
+		</FORM>
+		</div>
 </body>
 </html>
